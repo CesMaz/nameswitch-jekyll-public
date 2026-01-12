@@ -1,0 +1,957 @@
+backend: 
+  name: git-gateway
+ # name: github
+  repo: CesMaz/nameswitch-jekyll
+ # repo: vosaul/NameSwitch
+  branch: main
+ # Path to your GitHub repository
+media_folder: "/_images/"
+public_folder: "/_images/"
+publish_mode: editorial_workflow
+
+collections:
+- name: pages_frontmatter
+  label: Pages frontmatter
+  files: 
+  - name: home
+    label: Home
+    file: /index.html
+    fields:
+    - name: title
+      widget: string
+    - name: image
+      widget: image
+      required: false
+    - name: description
+      widget: text
+      required: false
+    - name: page_id
+      widget: string
+    - name: video_id
+      widget: string
+  - name: adult-deed-poll
+    label: adult deed poll
+    file: _pages/adult-deed-poll.html
+    fields:
+    - name: title
+      widget: string
+    - name: image
+      widget: image
+      required: false
+    - name: description
+      widget: text
+      required: false
+    - name: page_id
+      widget: string
+  - name: blog
+    label: blog
+    file: _pages/blog.html
+    fields:
+    - name: title
+      widget: string
+    - name: image
+      widget: image
+      required: false
+    - name: description
+      widget: text
+      required: false
+    - name: page_id
+      widget: string
+  - name: contact-us
+    label: contact us
+    file: _pages/contact-us.html
+    fields:
+    - name: title
+      widget: string
+    - name: image
+      widget: image
+      required: false
+    - name: description
+      widget: text
+      required: false
+    - name: page_id
+      widget: string
+  - name: deed-poll-package
+    label: deed poll package
+    file: _pages/deed-poll-package.html
+    fields:
+    - name: title
+      widget: string
+    - name: image
+      widget: image
+      required: false
+    - name: description
+      widget: text
+      required: false
+    - name: page_id
+      widget: string
+  - name: epackage
+    label: epackage
+    file: _pages/epackage.html
+    fields:
+    - name: title
+      widget: string
+    - name: image
+      widget: image
+      required: false
+    - name: description
+      widget: text
+      required: false
+    - name: page_id
+      widget: string
+  - name: faqs
+    label: faqs
+    file: _pages/faqs.html
+    fields:
+    - name: title
+      widget: string
+    - name: image
+      widget: image
+      required: false
+    - name: description
+      widget: text
+      required: false
+    - name: page_id
+      widget: string
+  - name: free-checklist
+    label: free checklist
+    file: _pages/free-checklist.html
+    fields:
+    - name: title
+      widget: string
+    - name: image
+      widget: image
+      required: false
+    - name: description
+      widget: text
+      required: false
+    - name: page_id
+      widget: string
+  - name: gift-nameswitch
+    label: gift nameswitch
+    file: /_pages/gift-nameswitch.html
+    fields:
+    - name: title
+      widget: string
+    - name: image
+      widget: image
+      required: false
+    - name: description
+      widget: text
+      required: false
+    - name: page_id
+      widget: string
+  - name: guides
+    label: guides page
+    file: /_pages/guide.html
+    fields:
+    - name: title
+      widget: string
+    - name: image
+      widget: image
+      required: false
+    - name: description
+      widget: text
+      required: false
+    - name: subtitle
+      widget: string
+    - name: ps
+      widget: string
+    - name: page_id
+      widget: string
+
+  - name: packages
+    label: packages
+    file: /_pages/packages.html
+    fields:
+    - name: title
+      widget: string
+    - name: image
+      widget: image
+      required: false
+    - name: description
+      widget: text
+      required: false
+    - name: page_id
+      widget: string
+    - name: video_id
+      widget: string
+  - name: printed-package
+    label: printed-package
+    file: /_pages/printed-package.html
+    fields:
+    - name: title
+      widget: string
+    - name: image
+      widget: image
+      required: false
+    - name: description
+      widget: text
+      required: false
+    - name: page_id
+      widget: string
+  - name: privacy-policy
+    label: privacy-policy
+    file: /_pages/privacy-policy.html
+    fields:
+    - name: title
+      widget: string
+    - name: image
+      widget: image
+      required: false
+    - name: description
+      widget: text
+      required: false
+    - name: page_id
+      widget: string
+    - name: class
+      widget: string
+    - name: date
+      widget: date
+  - name: terms
+    label: terms
+    file: /_pages/terms.html
+    fields:
+    - name: title
+      widget: string
+    - name: page_id
+      widget: string
+    - name: class
+      widget: string
+    - name: image
+      widget: image
+      required: false
+    - name: description
+      widget: text
+      required: false
+    - name: date
+      widget: date
+  - name: testimonials
+    label: testimonials
+    file: /_pages/testimonials.html
+    fields:
+    - name: title
+      widget: string
+    - name: page_id
+      widget: string
+    - name: image
+      widget: image
+      required: false
+    - name: description
+      widget: text
+      required: false
+  - name: uk-deed-poll-service
+    label: Deed Poll Services [New Page]
+    file: /_pages/uk-deed-poll-service.md
+    fields:
+    - name: 'layout'
+      widget: 'string'
+      default: 'page'       
+    - name: title
+      widget: 'string'
+    - name: 'meta_title'
+      widget: 'string'
+      required: false
+    - name: page_id
+      widget: string
+      default: uk-deed-poll-service
+      required: false
+    - name: image
+      widget: image
+      required: false
+    - name: description
+      widget: text
+      required: false
+    - name: 'body'
+      widget: 'markdown'
+               
+
+- name: pages
+  label: Pages data
+  files: 
+  - name: home
+    label: Home
+    file: /_data/home.yml
+    fields:
+    - name: hero
+      label: Hero section
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: subtitle, widget: string}
+      - name: description
+        widget: text
+      - name: cta
+        label: Call to action
+        widget: object
+        fields:
+        - {name: name, widget: string}
+        - {name: link, widget: string}
+    - name: intro
+      label: intro
+      widget: markdown 
+    - name: content
+      label: Content
+      widget: markdown 
+    - name: steps
+      label: Steps section
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: subtitle, widget: string}
+      - name: items
+        widget: list
+        fields:
+        - {name: name, widget: string }
+        - {name: image, widget: image }
+      - name: how_works
+        label: How it works
+        widget: object
+        fields:
+        - {name: title, widget: string}
+        - {name: cta_title, widget: string}
+        - name: tab
+          label: Tab
+          widget: list
+          add_to_top: true
+          minimize_collapsed: false
+          field:
+            name: col
+            label: Column
+            minimize_collapsed: false
+            widget: text
+            
+    - name: advantages
+      label: advantages
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: cta_title, widget: string}
+      - name: items
+        widget: list
+        fields:
+        - {name: title, widget: string }
+        - {name: text, widget: text }
+        - {name: image, widget: image }
+      - name: info
+        label: info
+        widget: list
+        field:
+          {name: p, widget: text}
+
+    - name: awards
+      label: awards
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - name: items
+        widget: list
+        field:
+          {name: image, widget: image }
+
+    - name: do_alone
+      label: Do alone
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: icon, widget: image}
+      - name: col-1
+        widget: text
+        field:
+          {name: p, widget: text }
+      - name: col-2
+        widget: list
+        field:
+          {name: p, widget: text }
+
+    - name: do_together
+      label: Do together
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: icon, widget: image}
+      - name: cols
+        widget: list
+        field:
+          {name: p, widget: string }
+      - name: gb_title
+        widget: string
+      - name: gb_items
+        widget: list
+        field:
+          {name: img, widget: image }
+
+    - name: why_choose_us
+      label: why choose us
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: image, widget: image}
+      - name: text
+        widget: text
+
+    - name: sequre
+      label: sequre
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: image, widget: image}
+      - name: text
+        widget: list
+        field:
+          {name: p, widget: string }
+
+    - name: brands
+      label: brands
+      widget: list
+      field:
+        {name: image, widget: image}
+
+  - name: packages
+    label: Packages
+    file: /_data/packages.yml
+    fields:
+    - name: hero
+      label: Hero section
+      widget: object
+      fields:
+      - {name: image, widget: image}
+      - {name: title, widget: string}
+      - {name: text, widget: string}
+    - name: intro
+      label: Intro
+      widget: markdown
+    - name: content
+      label: Content
+      widget: markdown
+    - name: packages
+      label: packages section
+      widget: list
+      fields:
+        - {name: title, widget: string}
+        - {name: text, widget: string}
+        - name: "pack"
+          widget: list
+          fields:
+          - {name: title, widget: string}
+          - {name: price, widget: string}
+          - {name: image, widget: image}
+          - {name: cta, widget: string}
+          - name: text
+            widget: text
+    - name: gift
+      widget: object
+      fields:
+      - {name: image, widget: image}
+      - {name: title, widget: string}
+      - name: text
+        widget: text
+
+    - name: why_us
+      label: Why Choose Us
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - name: items
+        widget: list
+        fields:
+        - {name: "title", widget: string}    
+        - {name: "image", widget: image}    
+
+  - name: adult-deed-poll
+    label: Adult Deed Poll
+    file: /_data/adult-deed-poll.yml
+    fields:
+    - name: hero
+      label: Hero section
+      widget: object
+      fields:
+      - {name: image, widget: image}
+      - {name: title, widget: string}
+      - {name: price, widget: string}
+      - {name: cta, widget: string}
+      - name: text
+        widget: text
+    - name: perfect
+      label: Perfect for you 
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: image, widget: image}
+      - name: text
+        widget: text
+    - {name: steps_title, widget: string}
+    - name: steps_items
+      widget: list
+      fields: 
+      - {name: "text", widget: text}
+      - {name: "image", widget: image}
+
+    - name: goodbye
+      label: goodbye
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: image, widget: image}
+      - name: text
+        widget: text
+
+    - name: why_choose_us
+      label: Why Choose Us
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: image, widget: image}
+      - name: text
+        widget: text
+
+  - name: epackage
+    label: ePackage
+    file: /_data/epackage.yml
+    fields:
+      - name: hero
+        label: Hero section
+        widget: object
+        fields:
+          - {name: title, widget: string}
+          - {name: image, widget: image}
+          - {name: price, widget: string}
+          - {name: cta, widget: string}
+          - {name: text, widget: text}
+      - name: perfect
+        label: Perfect for you section
+        widget: object
+        fields:
+          - {name: title, widget: string}
+          - name: text-1
+            widget: list
+            field:
+              {name: "_", widget: text}
+          - name: text-2
+            widget: object
+            fields:
+
+            - {name: title, widget: text}
+            - name: items
+              widget: list
+              field:
+                {name: "_", widget: string}
+          - {name: ps, label: Postscriptum, widget: text}
+      - {name: steps_title, label: steps title, widget: string}
+      - {name: steps_subtitle, label: steps subtitle, widget: string}
+      - name: steps_text
+        label: steps text
+        widget: list
+        field:
+          name: p
+          label: "_"
+          widget: text
+
+  
+      - name: why_choose_us
+        label: Why Choose Us
+        widget: object
+        fields:
+          - {name: title, widget: string}
+          - {name: image, widget: image}
+          - name: text
+            widget: text
+
+  - name: pack_print
+    label: Print Package
+    file: /_data/pack_print.yml
+    fields:
+    - name: hero
+      label: Hero section
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: image, widget: image}
+      - {name: price, widget: string}
+      - {name: cta, widget: string}
+      - name: text
+        widget: text
+    - name: perfect
+      label: Perfect for you section
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - name: text-1
+        widget: list
+        field:
+          {name: "_", widget: text}
+      - name: text-2
+        widget: object
+        fields:
+        - {name: title, widget: text}
+        - name: items
+          widget: list
+          field:
+            {name: "_", widget: string}
+      - {name: ps, label: Postscriptum, widget: text}
+
+    - {name: steps_title, label: steps title, widget: string}
+    - {name: steps_subtitle, label: steps subtitle, widget: string}
+    - {name: steps_text, label: steps text, widget: text}
+    - name: goodbye
+      label: goodbye
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: image, widget: image}
+      - name: text
+        widget: text
+
+  - name: deed_pool
+    label: Deed Poll - Printed Service
+    file: /_data/deed_pool.yml
+    fields:
+    - {name: title, widget: string}
+    - {name: image, widget: image}
+    - {name: price, widget: string}
+    - {name: cta, widget: string}
+    - name: text
+      widget: text
+    - name: perfect
+      label: Perfect for you 
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: image, widget: image}
+      - name: text
+        widget: list
+        field:
+          name: b
+          label: text block
+          widget: object
+          fields:
+          - name: text-1
+            widget: list
+            field: 
+              name: p
+              widget: string
+          - name: text-2
+            widget: list
+            field: 
+              name: p
+              widget: string
+      - {name: "ps", widget: text}
+      - {name: "cta", widget: string}
+
+    - name: switching
+      label: switching section
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: subtitle, widget: string}
+      - name: items
+        widget: list
+        fields:
+        - {name: "image", widget: image}  
+        - {name: "text", widget: string}  
+
+    - name: goodbye
+      label: goodbye
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: image, widget: image}
+      - name: text
+        widget: text
+
+    - name: why_choose_us
+      label: Why Choose Us
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: image, widget: image}
+      - name: text
+        widget: text
+
+  - name: blog
+    label: Blog posts page
+    file: /_data/blog.yml
+    fields:
+    - {name: title, widget: string}
+    - name: description
+      widget: list
+      field: 
+        {name: "_", widget: text}
+    - name: guides
+      label: guides section
+      widget: object
+      fields: 
+      - {name: title, widget: string}
+      - {name: cta_title, widget: string}
+      - {name: cta_link, widget: string}
+      - name: info
+        widget: list
+        field: 
+          {name: "_", widget: text}
+    - name: checklist
+      label: checklist
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: text, widget: text}
+      - {name: cta_title, widget: string}
+      - {name: cta_link, widget: string}
+
+  - name: guides
+    label: Guides Page
+    file: /_data/guide.yml
+    fields:
+    - name: blog
+      label: Blog Section
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: image, widget: image}
+      - {name: cta_title, widget: string}
+      - name: text
+        widget: list
+        field: 
+          {name: "_", widget: text}
+    - name: checklist
+      label: Checklist Section
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: image, widget: image}
+      - {name: text, widget: text}
+      - {name: cta_title, widget: string}
+      - {name: cta_link, widget: string}
+
+  - name: gift
+    label: Gift Package
+    file: /_data/gift.yml
+    fields:
+    - name: gift
+      label: Gift
+      widget: object
+      fields:
+      - {name: price, widget: string}
+      - name: text
+        widget: text
+    - name: perfect
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - name: text
+        widget: text
+      - {name: subtitle, widget: string}
+      - name: items
+        widget: list
+        fields:
+        - {name: "title", widget: string}
+        - {name: "price", widget: string}
+        - {name: "image", widget: image}
+
+      - name: cta
+        label: call to action
+        widget: object
+        fields:
+        - {name: "title", widget: string}
+        - {name: "name", widget: string}
+        - {name: "link", widget: string}
+
+    - name: goodbye
+      label: Goodbye
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: image, widget: image}
+      - name: text
+        widget: text
+
+    - name: why_choose_us
+      label: Why Choose Us
+      widget: object
+      fields:
+      - {name: title, widget: string}
+      - {name: image, widget: image}
+      - name: text
+        widget: text
+
+  - name: faqs
+    label: FAQs
+    file: /_data/faq.yml
+    fields:
+    - name: items
+      label: FAQs
+      widget: list
+      add_to_top: true
+      fields: 
+      - { label: 'Question', name: 'q', widget: 'string' }
+      - { label: 'Answer', name: 'a', widget: 'text' }
+      - name: 'ids'
+        widget: 'list'
+        field: {name: '_', label: 'pages IDs', widget: string}
+
+  - name: privacy
+    label: Privacy Policy
+    file: /_data/privacy.yml
+    fields:
+    - name: items
+      label: Items
+      widget: list
+      fields: 
+      - { label: 'Question', name: 'q', widget: 'string' }
+      - { label: 'Answer', name: 'a', widget: 'text' }
+
+  - name: terms
+    label: Terms
+    file: /_data/terms.yml
+    fields:
+    - name: items
+      label: Items
+      widget: list
+      fields: 
+      - { label: 'Question', name: 'q', widget: 'string' }
+      - { label: 'Answer', name: 'a', widget: 'text' }
+
+  - name: teatimonials-all
+    label: Testimonials full
+    file: /_data/testimonials-full.yml
+    fields:
+    - name: items
+      label: Items
+      widget: list
+      add_to_top: true
+      fields: 
+      - { label: 'Title', name: 'title', widget: 'text' }
+      - label: Date
+        name: date
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        default: "{{now | date('YYYY-MM-DD')}}"
+      - { label: 'Stars', name: 'stars', widget: 'string' }
+      - { label: 'Cyte', name: 'cyte', widget: 'text'}
+
+  - name: teatimonials
+    label: Testimonials with avatars
+    file: /_data/testimonials.yml
+    fields:
+    - name: items
+      label: Items
+      widget: list
+      add_to_top: true
+      fields: 
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - name: 'cyte'
+        widget: 'text'
+    
+  - name: how_ns_help
+    label: How can NameSwitch help
+    file: /_data/how_ns_help.yml
+    fields:
+    - name: title
+      label: Title
+      widget: string
+    - name: info
+      widget: text
+    - name: cta_link
+      widget: string
+    - name: cta_label
+      widget: string
+    
+
+  - name: free-checklist
+    label: Free Checklist
+    file: /_data/free-checklist.yml
+    fields:
+    - name: title
+      label: Title
+      widget: string
+    - name: about_package
+      widget: object
+      fields:
+      - name: title
+        label: Title
+        widget: string
+      - name: items
+        widget: list
+        fields:
+        - { label: 'title', name: 'title', widget: 'string' }
+        - { label: 'Image', name: 'image', widget: 'string' }
+    - name: why_choose_us
+      widget: object
+      fields:
+      - { label: 'title', name: 'title', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'string' }
+      - { label: 'CTA', name: 'cta', widget: 'string' }
+      - { label: 'text', name: 'text', widget: 'text' }
+
+    - name: guides
+      widget: object
+      fields:
+      - { label: 'title', name: 'title', widget: 'string' }
+      - { label: 'info', name: 'info', widget: 'list' }
+      - { label: 'CTA label', name: 'cta_title', widget: 'string' }
+      - { label: 'CTA link', name: 'cta_link', widget: 'tstringext' }
+  #  - name: thanks
+  #    widget: text
+
+
+- name: "blog-posts"
+  label: "Blog Posts"
+  folder: "/_blog/"
+  create: true
+  fields:
+    - { label: 'Title', name: 'title', widget: 'string' }
+    - { name: 'layout', widget: 'string', default: 'post' }
+    - { label: 'Publish Date', name: 'date', widget: 'string', default: null}
+    - { label: 'Image', name: 'image', widget: 'image', required: false }
+    - { label: 'description', name: 'description', widget: 'text', required: false  }
+    - { label: 'intro', name: 'intro', widget: 'text', required: false  }
+    - { label: 'Slug', name: 'slug', widget: 'string', required: false, default: null}
+
+    - name: intro_image
+      label: image for intro section
+      widget: object
+      required: false
+      fields:
+      - { label: 'Image', name: 'image', widget: 'image', required: false }
+      - { label: 'Caption', name: 'caption', widget: 'text', required: false }
+    - { label: 'Body', name: 'body', widget: 'markdown' , required: false }
+
+- name: "guides"
+  label: "Guide single collection"
+  folder: "/_guide/"
+  create: true
+  fields:
+    - { label: 'Title', name: 'title', widget: 'string' }
+    - { label: 'Slug', name: 'slug', widget: 'string', required: false, default: null }
+    - { label: 'Meta Title', name: 'meta_title', widget: 'string', required: false }
+    - { name: 'layout', widget: 'string', default: 'guide' }
+    - { label: 'Publish Date', name: 'date', widget: 'string', required: false }
+    - { label: 'description', name: 'description', widget: 'text', required: false  }
+    - { label: 'Image', name: 'image', widget: 'image', required: false }
+    - { label: 'intro', name: 'intro', widget: 'text', required: false  }
+    - name: intro_image
+      label: image for intro section
+      widget: object
+      required: false
+      fields:
+      - { label: 'Image', name: 'image', widget: 'image', required: false }
+      - { label: 'Caption', name: 'caption', widget: 'text', required: false }
+    - { label: 'Body', name: 'body', widget: 'markdown' , required: false }
+
+- name: markdown-pages
+  label: Markdown Pages
+  folder: _pages
+  create: true
+  fields:
+    - { label: 'Title', name: 'title', widget: 'string' }
+    - { label: 'Meta Title', name: 'meta_title', widget: 'string', required: false }
+    - { name: 'layout', widget: 'string', default: 'page' }
+    - { name: 'page_id', widget: 'string', default: 'page' }
+    - { name: 'class', widget: 'string', required: false }
+    - { label: 'description', name: 'description', widget: 'text', required: false  }
+    - { label: 'intro', name: 'intro', widget: 'text', required: false  }
+    - { label: 'Image', name: 'image', widget: 'image', required: false }
+    - { label: 'Publish Date', name: 'date', widget: 'string', required: false }
+    - { label: 'Body', name: 'body', widget: 'markdown' , required: false }

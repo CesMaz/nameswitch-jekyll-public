@@ -1,0 +1,18 @@
+[build.environment]
+  RUBY_VERSION = "3.4.3"
+[[redirects]]
+  from = "/guide/after-divorce-or-separation"
+  to = "/blog/name-change-options-after-divorce-or-separation/"
+  status = 301
+  
+[[redirects]]
+  from = "/#how-it-works"
+  to = "/how-it-works"
+  status = 301
+  
+  
+[[redirects]]
+  from = "https://www.nameswitch.co.uk/profile"
+  to = "https://app.nameswitch.co.uk/profile/"
+  status = 301
+  

@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /contact/message
+Disallow: /sign-in
+Disallow: /users/sign_in
+Disallow: /users/sign_in/
+Disallow: /users/password
+Disallow: /contact/thank_you/
+Disallow: /admin/
+Disallow: /blog/vow_for_girls
+Disallow: /deedpoll/
+Sitemap: https://www.nameswitch.co.uk/sitemap.xml

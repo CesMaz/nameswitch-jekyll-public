@@ -1,0 +1,430 @@
+main {
+  min-height: 80vh;
+}
+
+body {
+  background: #ffffff;
+  color: #006169;
+  font-family: Raleway;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 26px;
+  line-height: 34px;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+
+a {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 48px;
+    line-height: 62px;
+  }
+  h2 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+  h3 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  h4 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  p, a {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+.h-full {
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+* {
+  font-family: "Raleway";
+}
+
+.markdown-page {
+  min-height: 80vh;
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+.markdown-page .according p, .markdown-page .according a, .markdown-page .according li {
+  font-size: 16px;
+}
+.markdown-page .according p, .markdown-page .according li {
+  color: #006169;
+  line-height: 1.5;
+  background: rgb(255, 255, 255);
+  padding: 10px 135px 25px 30px;
+  font-weight: 400;
+}
+.markdown-page table th {
+  width: 33%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.markdown-page table td, .markdown-page table th {
+  padding: 15px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: top;
+  border-radius: 2px;
+  border: 1px solid #ddd;
+}
+
+.lunrsearchresult {
+  padding-bottom: 1rem;
+}
+
+.lunrsearchresult .title {
+  color: #006169;
+  font-size: 1.2rem;
+}
+
+.lunrsearchresult .url {
+  color: silver;
+}
+
+.lunrsearchresult a {
+  display: block;
+  color: #777;
+}
+
+.lunrsearchresult a:hover,
+.lunrsearchresult a:focus {
+  text-decoration: none;
+}
+
+.lunrsearchresult a:hover .title {
+  text-decoration: underline;
+}
+
+.search_form {
+  position: relative;
+  z-index: 10;
+  max-width: 400px;
+  margin: 0;
+}
+.search_form .form-control {
+  display: block;
+  width: 100%;
+  margin: auto;
+  padding: 9px 20px;
+  border: 1px #ddd solid;
+  border-radius: 4px;
+}
+@media (min-width: 600px) {
+  .search_form .form-control {
+    border-radius: 8px;
+  }
+}
+
+.mainsearch {
+  background: rgb(232, 232, 232);
+}
+.mainsearch #lunrsearchresults {
+  width: 90%;
+  z-index: 100;
+  background: rgb(232, 232, 232);
+  margin: 0 auto;
+}
+.mainsearch #lunrsearchresults ul {
+  margin-bottom: 0;
+}
+.mainsearch #lunrsearchresults #search_header {
+  width: 80%;
+  padding-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr 40px;
+}
+.mainsearch #lunrsearchresults #search_header h3 {
+  margin-bottom: 10px;
+  padding: 20px;
+}
+.mainsearch #lunrsearchresults #search_header #search_closer {
+  padding: 10px;
+  border-radius: 5px;
+  width: fit-content;
+  align-items: start;
+  font-size: 2rem;
+}
+.mainsearch #lunrsearchresults #search_header #search_closer:hover {
+  cursor: pointer;
+  color: rgb(50, 53, 182);
+  background-color: #aac;
+}
+.mainsearch #lunrsearchresults p {
+  padding: 10px 20px;
+}
+.mainsearch .lunrsearchresults-list-item {
+  font-weight: 400;
+  list-style: decimal;
+  list-style-position: outside;
+  padding-bottom: 1rem;
+}
+.mainsearch .lunrsearchresults-list-item .search-result-title {
+  color: rgb(2, 56, 2);
+}
+.mainsearch .lunrsearchresults-list-item .url {
+  color: silver;
+}
+.mainsearch .lunrsearchresults-list-item a {
+  display: block;
+  color: #777;
+}
+.mainsearch .lunrsearchresults-list-item a:hover,
+.mainsearch .lunrsearchresults-list-item .lunrsearchresult a:focus {
+  text-decoration: none;
+}
+.mainsearch .lunrsearchresults-list-item a:hover .title {
+  text-decoration: underline;
+}
+.mainsearch .lunrsearchresults-list-item svg {
+  display: none;
+}
+.mainsearch .lunrsearchresults-list-item .search-result-highlight {
+  font-weight: 800;
+}
+.mainsearch .mb160 {
+  margin: 0 auto 160px;
+}
+
+.dark-mode .mainsearch #lunrsearchresults {
+  background: #000;
+}
+.dark-mode .mainsearch #lunrsearchresults a:hover {
+  color: #aac !important;
+}
+.dark-mode .mainsearch .lunrsearchresult .title {
+  color: lightgred;
+}
+.dark-mode .mainsearch .lunrsearchresult .url {
+  color: silver;
+}
+.dark-mode .mainsearch .lunrsearchresult a {
+  display: block;
+  color: #eee;
+}
+.dark-mode .mainsearch .search-form .form-control {
+  border: 1px #556 solid;
+  background-color: #334;
+  color: #ddd;
+}
+.dark-mode .mainsearch #search_closer:hover {
+  color: rgb(200, 200, 255);
+}
+
+.search_box {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  align-items: center;
+}
+
+.claviyo_box input[type=text], .claviyo_box input[type=email], .claviyo_box input[type=tel], .claviyo_box input[type=date], .claviyo_box input[type=number], .claviyo_box select, .claviyo_box textarea {
+  width: 100% !important;
+  padding: 12px !important;
+  border: 1px solid #05797C !important;
+  border-radius: 4px !important;
+  box-sizing: border-box !important;
+  margin-top: 6px !important;
+  margin-bottom: 16px !important;
+  resize: vertical !important;
+  font-family: "Raleway" !important;
+  font-size: 20px !important;
+  color: #006169 !important;
+  line-height: 1.5 !important;
+  background-color: #fff;
+}
+
+.contact-series {
+  background: #fff;
+  padding: 110px 0px;
+  position: relative;
+  overflow: hidden;
+}
+
+.font-size-24 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 600;
+}
+
+.email_text {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+  text-decoration: underline;
+  padding-top: 50px;
+  color: #ff7900 !important;
+}
+
+.contact_services_text {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+  padding-top: 30px;
+}
+
+.contact_map_text {
+  background: #fff;
+  padding: 0px 0px 50px;
+  position: relative;
+}
+
+.contact_box {
+  position: relative;
+  background-color: #E3F1F1;
+  padding: 15px 15px;
+  border-radius: 15px;
+}
+@media (min-width: 600px) {
+  .contact_box {
+    padding: 15px 50px;
+  }
+}
+
+.claviyo_box form label,
+.contact_box label {
+  font-family: "Raleway" !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  color: #006169 !important;
+}
+
+.main_part_contact {
+  margin-top: 35px;
+}
+
+.submit_btn {
+  position: relative;
+  width: 80%;
+  margin: 20px auto;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  display: block;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #fff;
+  border-radius: 23px;
+  -webkit-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms;
+  overflow: hidden;
+  background-color: #ff7900;
+  text-decoration: none;
+  font-family: "Raleway";
+  z-index: 2;
+}
+
+#cookie-notice {
+  z-index: 1000;
+  padding: 1rem;
+  display: none;
+  justify-content: space-around;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: rgb(210, 210, 210);
+  background-color: rgb(44, 44, 44);
+  font-size: 16px;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  #cookie-notice {
+    grid-template-columns: 1fr max-content;
+    padding: 1rem 8rem 1rem 1rem;
+  }
+}
+#cookie-notice button,
+#cookie-notice a {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  color: #fff;
+  border-radius: 4px;
+}
+
+#cookie-notice button:hover,
+#cookie-notice a:hover {
+  color: yellow !important;
+}
+
+#cookie-notice button.btn {
+  background: #397439;
+  padding: 5px 20px;
+}
+
+.btn-primary {
+  background: darkgreen;
+}
+
+#cookie-notice span {
+  max-width: 1000px;
+  margin: auto;
+  line-height: 1.3;
+}
+
+@media (max-width: 767px) {
+  #cookie-notice span {
+    display: block;
+    padding-top: 3px;
+    margin-bottom: 1rem;
+  }
+  #cookie-notice button {
+    position: relative;
+    bottom: 4px;
+  }
+  #cookie-notice a {
+    position: relative;
+    bottom: 4px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
